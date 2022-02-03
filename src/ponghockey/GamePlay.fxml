@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ponghockey.GamePlayController">
+   <children>
+      <Pane id="playArea" fx:id="playArea" layoutY="53.0" prefHeight="627.0" prefWidth="1280.0" style="-fx-background-color: #0B61A4;">
+         <children>
+            <Rectangle id="paddleRect" fx:id="paddleRect" arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="30.0" layoutX="560.0" layoutY="598.0" stroke="BLACK" strokeType="INSIDE" width="160.0" />
+            <Circle id="ball" fx:id="ball" fill="WHITE" layoutX="209.0" layoutY="96.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="7.0" style="-fx-background-color: #0B61A4;" text="Button" textFill="TRANSPARENT" />
+            <HBox alignment="TOP_CENTER" layoutY="-54.0" prefHeight="54.0" prefWidth="1280.0" spacing="300.0" style="-fx-background-color: #043E6B;">
+               <children>
+                  <Group>
+                     <children>
+                        <Label prefHeight="53.0" prefWidth="115.0" text="Points:" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="pointsLabel" layoutX="115.0" prefHeight="53.0" prefWidth="24.0" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <Label prefHeight="53.0" prefWidth="97.0" text="Level:" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="levelLabel" layoutX="97.0" prefHeight="53.0" prefWidth="48.0" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <Label prefHeight="53.0" prefWidth="84.0" text="Time:" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="timerLabel" layoutX="84.0" prefHeight="53.0" prefWidth="71.0" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold" size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Group>
+               </children>
+            </HBox>
+            <Pane layoutY="627.0" prefHeight="40.0" prefWidth="1280.0" style="-fx-background-color: #043E6B;">
+               <children>
+                  <Button fx:id="pauseButton" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#pauseButtonPressed" prefHeight="34.0" prefWidth="1280.0" style="-fx-background-color: #043E6B;" text="PAUSE" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label fx:id="pauseLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="133.0" onMouseClicked="#pauseButtonPressed" prefHeight="72.0" prefWidth="1280.0" text="GAME PAUSED" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Consolas Bold Italic" size="63.0" />
+               </font>
+            </Label>
+            <Button fx:id="playAgain" disable="true" layoutX="528.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#playAgainButtonPressed" prefHeight="72.0" prefWidth="225.0" style="-fx-background-color: #043E6B;" text="Play Again" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Consolas Bold" size="25.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Button>
+            <Button fx:id="quitButton" disable="true" layoutX="528.0" layoutY="364.0" mnemonicParsing="false" onMouseClicked="#quitButtonPressed" prefHeight="72.0" prefWidth="225.0" style="-fx-background-color: #043E6B;" text="Quit Game" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Consolas Bold" size="25.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Button>
+            <Button fx:id="continueButton" disable="true" layoutX="528.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#continueButtonPressed" prefHeight="72.0" prefWidth="225.0" style="-fx-background-color: #043E6B;" text="Continue" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Consolas Bold" size="25.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
